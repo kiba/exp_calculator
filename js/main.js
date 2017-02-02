@@ -9,4 +9,5 @@ function errorMessage(error) {
 
 $(document).ready(function()
 {
+  $.getJSON("kurosawa_hazo.json", receiveData).fail(errorMessage)
 });
