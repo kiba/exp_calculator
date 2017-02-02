@@ -1,6 +1,8 @@
 
 function receiveData(data) {
   console.log("success");
+  var msg = "test"
+  $("ul").append("<li>" + msg + "</li>")
 }
 
 function errorMessage(error) {
