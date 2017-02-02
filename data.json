@@ -1,4 +1,18 @@
 {
   "Name": "Kurosawa Hazou",
-  "Intelligence": 14
+  "Intelligence": 19,
+  "Wit": 7,
+  "Resolve": 4,
+  "Strength": 8,
+  "Dexterity": 10,
+  "Stamina": 8,
+  "Presence": 8,
+  "Dexterity": 10,
+  "Stamina": 8,
+  "Presence": 5,
+  "Manipulation": 7,
+  "Composure": 5,
+  "Capacity": 10,
+  "Control": 2,
+  "Regeneration": 5
 }
