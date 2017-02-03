@@ -3,7 +3,7 @@ function attribute(n) {
   return n * 2;
 }
 
-function series_sum(n)
+function skill_sum(n)
 {
   if (n === 0)
   {
