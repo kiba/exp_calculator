@@ -16,5 +16,13 @@
     "Capacity": 10,
     "Control": 2,
     "Regeneration": 5
+  },
+  "chakra_natures":
+  {
+    "Fire": 0,
+    "Wind": 0,
+    "Lighting": 0,
+    "Earth": 10,
+    "Water": 0
   }
 }
