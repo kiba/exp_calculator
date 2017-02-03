@@ -1,4 +1,8 @@
 
+function attribute(n) {
+  return n * 2;
+}
+
 function receiveData(data) {
   for (var key in data.attributes)
   {
