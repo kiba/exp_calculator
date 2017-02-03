@@ -3,6 +3,12 @@ function attribute(n) {
   return n * 2;
 }
 
+function series_sum(n)
+{
+  if n === 0
+  return n + addition(n - 1);
+}
+
 function receiveData(data) {
   var cost = 0;
   for (var key in data.attributes)
