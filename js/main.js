@@ -4,10 +4,14 @@ function attribute(n) {
 }
 
 function receiveData(data) {
+  var cost = 0;
   for (var key in data.attributes)
   {
-    $("ul").append("<li> " + key + " : " + data.attributes[key] + " </li>");
+    var value = data.attributes[key];
+    cost = cost + attribute(value);
+    $("ul").append("<li> " + key + " : " + value + " </li>");
   }
+  console.log(cost);
 }
 
 function errorMessage(error) {
