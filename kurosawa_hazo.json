@@ -24,5 +24,23 @@
     "Lighting": 0,
     "Earth": 10,
     "Water": 0
+  },
+  "skills": {
+    "Taijustu": 27,
+    "Weapons": 2,
+    "Deception": 14,
+    "Diplomacy": 8,
+    "Sealing": 8,
+    "Technique Hacking": 19,
+    "Awareness": 20,
+    "Tactical Movement": 18,
+    "Stealth": 10,
+    "Mechanical Aptitude": 3,
+    "Medicine": 1,
+    "Medical Ninjustu": 0,
+    "Chakra Adhesion": 1,
+    "Chakra Repulsion": 1,
+    "Hunting": 1,
+    "Thousand Yard Stare": 3
   }
 }
