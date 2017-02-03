@@ -1,8 +1,11 @@
 
 function receiveData(data) {
-  console.log("success");
+  for (var key in data.attributes)
+  {
+    $("ul").append("<li> " + key + " : " + data.attributes[key] + " </li>")
+  }
   var msg = "test"
-  $("ul").append("<li>" + msg + "</li>")
+
 }
 
 function errorMessage(error) {
