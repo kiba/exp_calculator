@@ -17,6 +17,11 @@ function receiveData(data) {
     cost = cost + attribute(value);
     $("ul").append("<li> " + key + " : " + value + " </li>");
   }
+  for (var key in data.skills)
+  {
+    var value = data.skills[key];
+    cost = cost + series_sum(value);
+  }
   console.log(cost);
 }
 
