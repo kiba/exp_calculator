@@ -2,10 +2,8 @@
 function receiveData(data) {
   for (var key in data.attributes)
   {
-    $("ul").append("<li> " + key + " : " + data.attributes[key] + " </li>")
+    $("ul").append("<li> " + key + " : " + data.attributes[key] + " </li>");
   }
-  var msg = "test"
-
 }
 
 function errorMessage(error) {
@@ -14,5 +12,5 @@ function errorMessage(error) {
 
 $(document).ready(function()
 {
-  $.getJSON("kurosawa_hazo.json", receiveData).fail(errorMessage)
+  $.getJSON("kurosawa_hazo.json", receiveData).fail(errorMessage);
 });
