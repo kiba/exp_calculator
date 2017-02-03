@@ -42,5 +42,16 @@
     "Chakra Repulsion": 1,
     "Hunting": 1,
     "Thousand Yard Stare": 3
+  },
+  "techniques": {
+    "Dispel": 1,
+    "Summoning Technique": 0,
+    "Transformation": 10,
+    "Clone": 1,
+    "Substitution": 9,
+    "Roki": 7,
+    "Doton: Earth Clone": 1,
+    "Doton: Multiple Earth Style Wall": 1,
+    "Doton: Living Roots": 1
   }
 }
