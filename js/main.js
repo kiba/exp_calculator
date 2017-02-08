@@ -7,7 +7,7 @@ function attribute(n) {
   return (n * 2) + attribute(n - 1);
 }
 
-function skill_sum(n)
+function summing(n)
 {
   if (n === 0)
   {
@@ -27,7 +27,7 @@ function receiveData(data) {
   for (var key in data.skills)
   {
     var value = data.skills[key];
-    cost = cost + skill_sum(value);
+    cost = cost + summing(value);
     $("ul").append("<li> " + key + " : " + value + " </li>");
   }
   console.log(cost);
