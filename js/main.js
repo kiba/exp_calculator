@@ -13,7 +13,7 @@ function summing(n)
   {
     return 0;
   }
-  return n + skill_sum(n - 1);
+  return n + summing(n - 1);
 }
 
 function receiveData(data) {
@@ -27,6 +27,12 @@ function receiveData(data) {
   for (var key in data.skills)
   {
     var value = data.skills[key];
+    cost = cost + summing(value);
+    $("ul").append("<li> " + key + " : " + value + " </li>");
+  }
+  for (var key in data.techniques)
+  {
+    var value = data.techniques[key];
     cost = cost + summing(value);
     $("ul").append("<li> " + key + " : " + value + " </li>");
   }
