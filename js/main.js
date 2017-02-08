@@ -34,13 +34,7 @@ function receiveData(data) {
   var cost = 0;
 
   cost = cost + listData(data.attributes,attribute,"attributes");
-
-  for (var key in data.skills)
-  {
-    var value = data.skills[key];
-    cost = cost + summing(value);
-    $("ul#skills").append("<li> " + key + " : " + value + " </li>");
-  }
+  cost = cost + listData(data.skills,summing,"skills");
   for (var key in data.techniques)
   {
     var value = data.techniques[key];
