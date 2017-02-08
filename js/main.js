@@ -36,6 +36,12 @@ function receiveData(data) {
     cost = cost + summing(value);
     $("ul#techniques").append("<li> " + key + " : " + value + " </li>");
   }
+  for (var key in data.chakra_natures)
+  {
+    var value = data.chakra_natures[key];
+    cost = cost + summing(value);
+    $("ul#chakra_natures").append("<li> " + key + " : " + value + " </li>");
+  }
   console.log(cost);
 }
 
