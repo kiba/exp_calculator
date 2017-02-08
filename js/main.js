@@ -35,12 +35,7 @@ function receiveData(data) {
 
   cost = cost + listData(data.attributes,attribute,"attributes");
   cost = cost + listData(data.skills,summing,"skills");
-  for (var key in data.techniques)
-  {
-    var value = data.techniques[key];
-    cost = cost + summing(value);
-    $("ul#techniques").append("<li> " + key + " : " + value + " </li>");
-  }
+  cost = cost + listData(data.techniques,summing,"techniques");
   for (var key in data.chakra_natures)
   {
     var value = data.chakra_natures[key];
