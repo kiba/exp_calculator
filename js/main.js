@@ -39,6 +39,7 @@ function receiveData(data) {
   cost = cost + listData(data.chakra_natures,summing,"chakra_natures")
   var reduction = summing(data.chakra_natures[data.chakra_affinity]);
   cost = cost - reduction;
+  $("ul#misc").append("<li>Cost: " + cost + "</li>");
 }
 
 function errorMessage(error) {
