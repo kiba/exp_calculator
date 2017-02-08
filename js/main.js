@@ -16,6 +16,19 @@ function summing(n)
   return n + summing(n - 1);
 }
 
+function listData(data,math)
+{
+  var cost = 0;
+  for (var key in data)
+  {
+    var value = data[key];
+    cost = cost + math(value);
+    $("ul#" + data).append("<li> " + key + " : " + value + " </li>");
+  }
+  return cost;
+}
+
+
 function receiveData(data) {
   var cost = 0;
   for (var key in data.attributes)
