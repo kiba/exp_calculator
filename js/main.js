@@ -42,6 +42,8 @@ function receiveData(data) {
     cost = cost + summing(value);
     $("ul#chakra_natures").append("<li> " + key + " : " + value + " </li>");
   }
+  var reduction = summing(data.chakra_natures[data.chakra_affinity]);
+  cost = cost - reduction;
   console.log(cost);
 }
 
