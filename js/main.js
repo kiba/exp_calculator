@@ -28,6 +28,7 @@ function receiveData(data) {
   {
     var value = data.skills[key];
     cost = cost + skill_sum(value);
+    $("ul").append("<li> " + key + " : " + value + " </li>");
   }
   console.log(cost);
 }
