@@ -24,7 +24,7 @@ function listData(data,math,name)
     var value = data[key];
     cost = cost + math(value);
 
-    $("ul#" + name).append("<li> " + key + " : " + value + " </li>");
+    $("ul#" + name).append("<li> " + key + ": " + value + " </li>");
   }
   return cost;
 }
