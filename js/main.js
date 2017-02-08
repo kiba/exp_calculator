@@ -16,14 +16,15 @@ function summing(n)
   return n + summing(n - 1);
 }
 
-function listData(data,math)
+function listData(data,math,name)
 {
   var cost = 0;
   for (var key in data)
   {
     var value = data[key];
     cost = cost + math(value);
-    $("ul#" + data).append("<li> " + key + " : " + value + " </li>");
+
+    $("ul#" + name).append("<li> " + key + " : " + value + " </li>");
   }
   return cost;
 }
@@ -31,12 +32,9 @@ function listData(data,math)
 
 function receiveData(data) {
   var cost = 0;
-  for (var key in data.attributes)
-  {
-    var value = data.attributes[key];
-    cost = cost + attribute(value);
-    $("ul#attributes").append("<li> " + key + " : " + value + " </li>");
-  }
+
+  cost = cost + listData(data.attributes,attribute,"attributes");
+
   for (var key in data.skills)
   {
     var value = data.skills[key];
