@@ -22,19 +22,19 @@ function receiveData(data) {
   {
     var value = data.attributes[key];
     cost = cost + attribute(value);
-    $("ul").append("<li> " + key + " : " + value + " </li>");
+    $("ul#attributes").append("<li> " + key + " : " + value + " </li>");
   }
   for (var key in data.skills)
   {
     var value = data.skills[key];
     cost = cost + summing(value);
-    $("ul").append("<li> " + key + " : " + value + " </li>");
+    $("ul#skills").append("<li> " + key + " : " + value + " </li>");
   }
   for (var key in data.techniques)
   {
     var value = data.techniques[key];
     cost = cost + summing(value);
-    $("ul").append("<li> " + key + " : " + value + " </li>");
+    $("ul#techniques").append("<li> " + key + " : " + value + " </li>");
   }
   console.log(cost);
 }
