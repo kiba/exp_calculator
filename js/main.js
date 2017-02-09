@@ -7,6 +7,14 @@ function attribute(n) {
   return (n * 2) + attribute(n - 1);
 }
 
+function nature(n) {
+  if (n === 0)
+  {
+    return 0;
+  }
+  return (n * 3) + nature(n - 1);
+}
+
 function summing(n)
 {
   if (n === 0)
