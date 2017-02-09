@@ -45,8 +45,8 @@ function receiveData(data) {
   cost = cost + listData(data.attributes,attribute,"attributes");
   cost = cost + listData(data.skills,summing,"skills");
   cost = cost + listData(data.techniques,summing,"techniques");
-  cost = cost + listData(data.chakra_natures,summing,"chakra_natures")
-  var reduction = summing(data.chakra_natures[data.chakra_affinity]);
+  cost = cost + listData(data.chakra_natures,nature,"chakra_natures")
+  var reduction = nature(data.chakra_natures[data.chakra_affinity]);
   cost = cost - reduction;
   var unspent = data.experience - cost;
   $("#misc").append("<dt>Experience</dt>");
