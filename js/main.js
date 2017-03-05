@@ -7,7 +7,7 @@ function attribute(n) {
   return (n * 2) + attribute(n - 1);
 }
 
-function capacity_versus_regen(capacity,regen)
+function cap_versus_regen(capacity,regen)
 {
   var cost = 0;
   if (capacity < regen)
@@ -58,6 +58,8 @@ function listData(data,math,name)
 function receiveData(data) {
   var cost = 0;
   var attributes = data.attributes;
+  var capacity = attributes["Capacity"];
+  var regen = attributes["Regeneration"];
   delete attributes["Capacity"];
   delete attributes["Regeneration"];
   var attribute_price = listData(data.attributes,attribute,"attributes");
