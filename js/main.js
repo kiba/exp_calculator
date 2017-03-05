@@ -65,6 +65,8 @@ function receiveData(data) {
   var attribute_price = listData(data.attributes,attribute,"attributes");
   cost += attribute_price;
   console.log(attribute_price);
+  cost += cap_versus_regen(capacity,regen);
+  console.log(cost);
   cost = cost + listData(data.skills,summing,"skills");
   cost = cost + listData(data.techniques,summing,"techniques");
   cost = cost + listData(data.chakra_natures,nature,"chakra_natures")
