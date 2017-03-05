@@ -1,10 +1,6 @@
 
 function attribute(n) {
-  if (n === 1)
-  {
-    return 0;
-  }
-  return (n * 2) + attribute(n - 1);
+  return (n * (n + 1)) - 2;
 }
 
 function cap_versus_regen(capacity,regen)
@@ -69,10 +65,10 @@ function receiveData(data) {
   {
     cost += 30;
   }
-  var skill_price = listData(data.skills,summing,"skills");
+  var skill_price = listData(data.skills,summing,"skills") + listData(data.techniques,summing,"techniques");
   console.log(skill_price);
   cost += skill_price;
-  cost = cost + listData(data.techniques,summing,"techniques");
+  console.log(cost);
   cost = cost + listData(data.chakra_natures,nature,"chakra_natures")
   var reduction = nature(data.chakra_natures[data.chakra_affinity]);
   cost = cost - reduction;
