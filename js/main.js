@@ -69,18 +69,18 @@ function receiveData(data) {
   var regen = attributes["Regeneration"];
   delete attributes["Capacity"];
   delete attributes["Regeneration"];
-  var attribute_price = listData(data.attributes,attribute,"attributes");
+  var attribute_price = calculateCost(data.attributes,attribute);
   cost += attribute_price;
   cost += cap_versus_regen(capacity,regen);
   if (data.bloodline === true)
   {
     cost += 30;
   }
-  var skill_price = listData(data.skills,summing,"skills") + listData(data.techniques,summing,"techniques");
+  var skill_price = calculateCost(data.skills,summing) + listData(data.techniques,summing,"techniques");
   console.log(skill_price);
   cost += skill_price;
   console.log(cost);
-  cost = cost + listData(data.chakra_natures,nature,"chakra_natures")
+  cost = cost + calculateCost(data.chakra_natures,nature)
   var reduction = nature(data.chakra_natures[data.chakra_affinity]);
   cost = cost - reduction;
   var unspent = data.experience - cost;
