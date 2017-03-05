@@ -1,6 +1,6 @@
 
 function attribute(n) {
-  if (n === 0)
+  if (n === 1)
   {
     return 0;
   }
@@ -33,7 +33,7 @@ function nature(n) {
 
 function summing(n)
 {
-  if (n === 0)
+  if (n === 1)
   {
     return 0;
   }
