@@ -7,6 +7,22 @@ function attribute(n) {
   return (n * 2) + attribute(n - 1);
 }
 
+function capacity_versus_regen(capacity,regen)
+{
+  var cost = 0;
+  if (capacity < regen)
+  {
+    cost += summing(capacity);
+    cost += attribute(regen);
+  }
+  else
+  {
+    cost += summing(regen);
+    cost += attribute(capacity);
+  }
+  return cost;
+}
+
 function nature(n) {
   if (n === 0)
   {
