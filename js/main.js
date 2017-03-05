@@ -41,8 +41,12 @@ function listData(data,math,name)
 
 function receiveData(data) {
   var cost = 0;
+  var attributes = data.attributes;
+  delete attributes["Capacity"];
+  delete attributes["Regeneration"];
   var attribute_price = listData(data.attributes,attribute,"attributes");
   cost += attribute_price;
+  console.log(attribute_price);
   cost = cost + listData(data.skills,summing,"skills");
   cost = cost + listData(data.techniques,summing,"techniques");
   cost = cost + listData(data.chakra_natures,nature,"chakra_natures")
