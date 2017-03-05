@@ -3,6 +3,10 @@ function attribute(n) {
   return (n * (n + 1)) - 2;
 }
 
+function attribute_summing(n) {
+  return (n * (n + 1) - 2) / 2;
+}
+
 function cap_versus_regen(capacity,regen)
 {
   var cost = 0;
