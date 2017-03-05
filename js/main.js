@@ -69,7 +69,9 @@ function receiveData(data) {
   {
     cost += 30;
   }
-  cost = cost + listData(data.skills,summing,"skills");
+  var skill_price = listData(data.skills,summing,"skills");
+  console.log(skill_price);
+  cost += skill_price;
   cost = cost + listData(data.techniques,summing,"techniques");
   cost = cost + listData(data.chakra_natures,nature,"chakra_natures")
   var reduction = nature(data.chakra_natures[data.chakra_affinity]);
