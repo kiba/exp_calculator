@@ -51,18 +51,14 @@ function calculateCost(data,math)
   return cost;
 }
 
-function listData(data,math,name)
+function listData(data,name)
 {
-  var cost = 0;
   for (var key in data)
   {
     var value = data[key];
-    cost = cost + math(value);
-
     $("#" + name).append("<dt>" + key + "</dt>");
     $("#" + name).append("<dd>" + value + "</dd>");
   }
-  return cost;
 }
 
 
