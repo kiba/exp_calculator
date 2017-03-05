@@ -40,6 +40,17 @@ function summing(n)
   return n + summing(n - 1);
 }
 
+function calculateCost(data,math)
+{
+  var cost = 0;
+  for (var key in data)
+  {
+    var value = data[key];
+    cost = cost + math(value);
+  }
+  return cost;
+}
+
 function listData(data,math,name)
 {
   var cost = 0;
