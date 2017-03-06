@@ -86,6 +86,10 @@ function calculateSkillPrice(data)
   var weapons = skills["Weapons"];
   var awareness = skills["Awareness"];
   var stealth = skills["Stealth"];
+  delete skills["Taijustu"];
+  delete skills["Weapons"];
+  delete skills["Awareness"];
+  delete skills["Stealth"];
   return cost;
 }
 
