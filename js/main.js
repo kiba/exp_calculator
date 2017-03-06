@@ -12,12 +12,12 @@ function cap_versus_regen(capacity,regen)
   var cost = 0;
   if (capacity < regen)
   {
-    cost += summing(capacity);
+    cost += attribute_summing(capacity);
     cost += attribute(regen);
   }
   else
   {
-    cost += summing(regen);
+    cost += attribute_summing(regen);
     cost += attribute(capacity);
   }
   return cost;
