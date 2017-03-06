@@ -72,6 +72,16 @@ function calculateAttributePrice(attributes, bloodline)
   return attribute_price;
 }
 
+function calculateSkillPrice(data)
+{
+  var skills = data.skills;
+  var techniques = data.techniques;
+  var taijustu = skills["Taijustu"];
+  var weapons = skills["Weapons"];
+  var awareness = skills["Awareness"];
+  var stealth = skills["Stealth"];
+}
+
 function receiveData(data) {
   var cost = 0;
   cost += calculateAttributePrice(data.attributes,data.bloodline);
