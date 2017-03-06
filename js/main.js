@@ -69,13 +69,12 @@ function receiveData(data) {
   var regen = attributes["Regeneration"];
   delete attributes["Capacity"];
   delete attributes["Regeneration"];
-  var attribute_price = calculateCost(data.attributes,attribute);
-  cost += attribute_price;
-  cost += cap_versus_regen(capacity,regen);
+  var attribute_price = calculateCost(data.attributes,attribute) + cap_versus_regen(capacity,regen);
   if (data.bloodline === true)
   {
-    cost += 30;
+    attribute_price += 30;
   }
+  console.log("Attribute XP: " + attribute_price);
   var skill_price = calculateCost(data.skills,summing) + listData(data.techniques,summing,"techniques");
   console.log(skill_price);
   cost += skill_price;
