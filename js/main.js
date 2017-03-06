@@ -7,6 +7,10 @@ function attribute_summing(n) {
   return (n * (n + 1) - 2) / 2;
 }
 
+function technique_bonus(n) {
+  return (n * (n + 1)) / 2 - 1;
+}
+
 function cap_versus_regen(capacity,regen)
 {
   var cost = 0;
