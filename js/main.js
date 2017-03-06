@@ -31,13 +31,9 @@ function nature(n) {
   return (n * 3) + nature(n - 1);
 }
 
-function summing(n)
+function skill_summing(n)
 {
-  if (n <= 1)
-  {
-    return 0;
-  }
-  return n + summing(n - 1);
+  return (n * (n + 1)) / 2;
 }
 
 function calculateCost(data,math)
