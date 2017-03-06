@@ -61,20 +61,24 @@ function listData(data,name)
   }
 }
 
-
-function receiveData(data) {
-  var cost = 0;
-  var attributes = data.attributes;
+function calculateAttributePrice(attributes, bloodline)
+{
   var capacity = attributes["Capacity"];
   var regen = attributes["Regeneration"];
   delete attributes["Capacity"];
   delete attributes["Regeneration"];
-  var attribute_price = calculateCost(data.attributes,attribute) + cap_versus_regen(capacity,regen);
-  if (data.bloodline === true)
+  var attribute_price = calculateCost(attributes,attribute) + cap_versus_regen(capacity,regen);
+  if (bloodline === true)
   {
     attribute_price += 30;
   }
   console.log("Attribute XP: " + attribute_price);
+  return attribute_price;
+}
+
+function receiveData(data) {
+  var cost = 0;
+  cost += calculateAttributePrice(data.attributes,data.bloodline);
   var skill_price = calculateCost(data.skills,summing) + listData(data.techniques,summing,"techniques");
   console.log(skill_price);
   cost += skill_price;
