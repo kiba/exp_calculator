@@ -72,6 +72,11 @@ function calculateAttributePrice(attributes, bloodline)
   return attribute_price;
 }
 
+function iron_nerve_bonus(n)
+{
+
+}
+
 function calculateSkillPrice(data)
 {
   var skills = data.skills;
