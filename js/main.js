@@ -90,6 +90,7 @@ function calculateSkillPrice(data)
   delete skills["Weapons"];
   delete skills["Awareness"];
   delete skills["Stealth"];
+  var bonus = iron_nerve_bonus(taijustu) + iron_nerve_bonus(weapons) + iron_nerve_bonus(awareness) + iron_nerve_bonus(awareness);
   return cost;
 }
 
