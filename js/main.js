@@ -79,7 +79,7 @@ function calculateAttributePrice(attributes, bloodline)
 function receiveData(data) {
   var cost = 0;
   cost += calculateAttributePrice(data.attributes,data.bloodline);
-  var skill_price = calculateCost(data.skills,summing) + listData(data.techniques,summing,"techniques");
+  var skill_price = calculateCost(data.skills,summing) + listData(data.techniques,summing);
   console.log(skill_price);
   cost += skill_price;
   console.log(cost);
