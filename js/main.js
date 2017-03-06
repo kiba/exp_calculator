@@ -74,7 +74,7 @@ function calculateAttributePrice(attributes, bloodline)
 
 function iron_nerve_bonus(n)
 {
-
+  return (n * (n + 1))/2 - 3;
 }
 
 function calculateSkillPrice(data)
@@ -90,7 +90,7 @@ function calculateSkillPrice(data)
 function receiveData(data) {
   var cost = 0;
   cost += calculateAttributePrice(data.attributes,data.bloodline);
-  var skill_price = calculateCost(data.skills,summing) + listData(data.techniques,summing);
+  // var skill_price = calculateCost(data.skills,summing) + listData(data.techniques,summing);
   cost = cost + calculateCost(data.chakra_natures,nature)
   var reduction = nature(data.chakra_natures[data.chakra_affinity]);
 
