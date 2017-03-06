@@ -76,11 +76,10 @@ function receiveData(data) {
   var cost = 0;
   cost += calculateAttributePrice(data.attributes,data.bloodline);
   var skill_price = calculateCost(data.skills,summing) + listData(data.techniques,summing);
-  console.log(skill_price);
-  cost += skill_price;
-  console.log(cost);
   cost = cost + calculateCost(data.chakra_natures,nature)
   var reduction = nature(data.chakra_natures[data.chakra_affinity]);
+
+
   cost = cost - reduction;
   var unspent = data.experience - cost;
   $("#misc").append("<dt>Experience</dt>");
