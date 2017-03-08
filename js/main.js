@@ -113,7 +113,6 @@ function calculateSkillPrice(data)
   cost += skills_cost;
   cost += techniques_cost;
   cost += academy_cost;
-  console.log(cost);
   return cost;
 }
 
@@ -122,7 +121,7 @@ function receiveData(data) {
   cost += calculateAttributePrice(data.attributes,data.bloodline);
   var skill_price = calculateSkillPrice(data);
   // var skill_price = calculateCost(data.skills,summing) + listData(data.techniques,summing);
-  cost = cost + calculateCost(data.chakra_natures,nature)
+  cost += calculateCost(data.chakra_natures,nature)
   var reduction = nature(data.chakra_natures[data.chakra_affinity]);
 
 
