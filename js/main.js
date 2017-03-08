@@ -40,6 +40,11 @@ function skill_summing(n)
   return (n * (n + 1)) / 2;
 }
 
+function technique_summing_minor(n)
+{
+  return (n * (n + 1)) / 2 - 1;
+}
+
 function calculateCost(data,math)
 {
   var cost = 0;
@@ -100,10 +105,13 @@ function calculateSkillPrice(data)
   delete techniques["Clone"];
   delete techniques["Transformation"];
   delete techniques["Substitution"];
+  console.log(techniques);
   var bonus = iron_nerve_bonus(taijustu) + iron_nerve_bonus(weapons) + iron_nerve_bonus(awareness) + iron_nerve_bonus(awareness);
   var skills_cost = calculateCost(skills,skill_summing);
+  var techniques_cost = calculateCost(techniques,skill_summing);
   cost += bonus;
   cost += skills_cost;
+  cost += techniques_cost;
   console.log(cost);
   return cost;
 }
