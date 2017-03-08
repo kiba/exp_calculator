@@ -105,13 +105,14 @@ function calculateSkillPrice(data)
   delete techniques["Clone"];
   delete techniques["Transformation"];
   delete techniques["Substitution"];
-  console.log(techniques);
-  var bonus = iron_nerve_bonus(taijustu) + iron_nerve_bonus(weapons) + iron_nerve_bonus(awareness) + iron_nerve_bonus(awareness);
+  var bonus = iron_nerve_bonus(taijustu) + iron_nerve_bonus(weapons) + iron_nerve_bonus(awareness) + iron_nerve_bonus(stealth);
   var skills_cost = calculateCost(skills,skill_summing);
   var techniques_cost = calculateCost(techniques,skill_summing);
+  var academy_cost = technique_summing_minor(transformation) + technique_summing_minor(clone) + technique_summing_minor(substitution);
   cost += bonus;
   cost += skills_cost;
   cost += techniques_cost;
+  cost += academy_cost;
   console.log(cost);
   return cost;
 }
