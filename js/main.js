@@ -96,7 +96,10 @@ function calculateSkillPrice(data)
   delete skills["Stealth"];
   var transformation = techniques["Transformation"];
   var clone = techniques["Clone"];
+  var substitution = techniques["Substitution"];
   delete techniques["Clone"];
+  delete techniques["Transformation"];
+  delete techniques["Substitution"];
   var bonus = iron_nerve_bonus(taijustu) + iron_nerve_bonus(weapons) + iron_nerve_bonus(awareness) + iron_nerve_bonus(awareness);
   var skills_cost = calculateCost(skills,skill_summing);
   cost += bonus;
