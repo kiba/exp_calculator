@@ -124,7 +124,6 @@ function receiveData(data) {
   cost += calculateCost(data.chakra_natures,nature)
   var reduction = nature(data.chakra_natures[data.chakra_affinity]);
 
-
   cost = cost - reduction;
   var unspent = data.experience - cost;
   $("#misc").append("<dt>Experience</dt>");
@@ -133,6 +132,8 @@ function receiveData(data) {
   $("#misc").append("<dd>" + cost + "</dd>");
   $("#misc").append("<dt>Unspent</dt>");
   $("#misc").append("<dd>" + unspent + "</dd>");
+
+  listData(data.attributes,"attributes");
 }
 
 function errorMessage(error) {
