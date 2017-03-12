@@ -80,10 +80,6 @@ function receiveData(data) {
   listData(data.skills,"skills");
   listData(data.techniques,"techniques");
   listData(data.chakra_natures,"chakra_natures");
-
-  $("button#attr").click(function() {
-    $("dl#attributes").hide()
-  });
 }
 
 function errorMessage(error) {
