@@ -134,6 +134,9 @@ function receiveData(data) {
   $("#misc").append("<dd>" + unspent + "</dd>");
 
   listData(data.attributes,"attributes");
+  listData(data.skills,"skills");
+  listData(data.techniques,"techniques");
+  listData(data.chakra_natures,"chakra_natures");
 }
 
 function errorMessage(error) {
