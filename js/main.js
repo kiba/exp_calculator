@@ -10,12 +10,28 @@ function listData(data,name)
   }
 }
 
+function matching(target,exceptions)
+{
+  for(var except in exceptions)
+  {
+    if (target === except)
+    {
+      return true;
+    }
+  }
+  return false;
+}
+
 function listSkill(data,name)
 {
   var exceptions = ["Taijustu", "Weapons", "Tactical Movement", "Stealth", "Mechanical Aptitude"];
   for (var key in data)
   {
     var value = data[key];
+    if (matching(key,exceptions) === true)
+    {
+      console.log("beep");
+    }
     var dd = "<dd>" + value + "</dd>"
     $("#" + name).append("<dt>" + key + "</dt>");
     $("#" + name).append(dd);
