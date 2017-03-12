@@ -4,8 +4,9 @@ function listData(data,name)
   for (var key in data)
   {
     var value = data[key];
+    var dd = "<dd id=\"" + key + "\">" + value + "</dd>"
     $("#" + name).append("<dt>" + key + "</dt>");
-    $("#" + name).append("<dd>" + value + "</dd>");
+    $("#" + name).append(dd);
   }
 }
 
