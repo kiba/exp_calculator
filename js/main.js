@@ -10,6 +10,17 @@ function listData(data,name)
   }
 }
 
+function listSkill(data,name)
+{
+  for (var key in data)
+  {
+    var value = data[key];
+    var dd = "<dd id=\"" + key + "\">" + value + "</dd>"
+    $("#" + name).append("<dt>" + key + "</dt>");
+    $("#" + name).append(dd);
+  }
+}
+
 function calculateAttributePrice(attributes, bloodline)
 {
   var capacity = attributes["Capacity"];
