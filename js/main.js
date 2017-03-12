@@ -12,6 +12,7 @@ function listData(data,name)
 
 function listSkill(data,name)
 {
+  var exceptions = ["Taijustu", "Weapons", "Tactical Movement", "Stealth", "Mechanical Aptitude"];
   for (var key in data)
   {
     var value = data[key];
