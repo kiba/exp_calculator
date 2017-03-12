@@ -27,11 +27,6 @@ function calculateAttributePrice(attributes, bloodline)
 
 function effective_level(skills)
 {
-  for (var key in skills)
-  {
-    var value = skills[key];
-    $("#" + name).append(value);
-  }
 }
 
 function calculateSkillPrice(data)
