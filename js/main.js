@@ -25,10 +25,6 @@ function calculateAttributePrice(attributes, bloodline)
   return attribute_price;
 }
 
-function effective_level(skills)
-{
-}
-
 function calculateSkillPrice(data)
 {
   var cost = 0;
@@ -81,7 +77,6 @@ function receiveData(data) {
   listData(data.techniques,"techniques");
   listData(data.chakra_natures,"chakra_natures");
 
-  effective_level(data.skills);
 }
 
 function errorMessage(error) {
