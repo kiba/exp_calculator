@@ -44,6 +44,11 @@ function technique_summing_minor(n)
   return (n * (n + 1)) / 2 - 1;
 }
 
+function iron_nerve_bonus(n)
+{
+  return (n * (n + 1))/2 - 3;
+}
+
 function calculateCost(data,math)
 {
   var cost = 0;
