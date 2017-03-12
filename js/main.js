@@ -80,6 +80,8 @@ function receiveData(data) {
   listData(data.skills,"skills");
   listData(data.techniques,"techniques");
   listData(data.chakra_natures,"chakra_natures");
+
+  effective_level(data.skills);
 }
 
 function errorMessage(error) {
