@@ -12,9 +12,9 @@ function listData(data,name)
 
 function matching(target,exceptions)
 {
-  for(var except in exceptions)
+  for(var i = 0; i < exceptions.length; i += 1)
   {
-    if (target === except)
+    if (target === exceptions[i])
     {
       return true;
     }
@@ -22,7 +22,7 @@ function matching(target,exceptions)
   return false;
 }
 
-function listSkill(data,name)
+function listSkills(data,name)
 {
   var exceptions = ["Taijustu", "Weapons", "Tactical Movement", "Stealth", "Mechanical Aptitude"];
   for (var key in data)
@@ -30,7 +30,7 @@ function listSkill(data,name)
     var value = data[key];
     if (matching(key,exceptions) === true)
     {
-      console.log("beep");
+      console.log(key);
     }
     var dd = "<dd>" + value + "</dd>"
     $("#" + name).append("<dt>" + key + "</dt>");
@@ -101,7 +101,7 @@ function receiveData(data) {
   $("#misc").append("<dd>" + unspent + "</dd>");
 
   listData(data.attributes,"attributes");
-  listData(data.skills,"skills");
+  listSkills(data.skills,"skills");
   listData(data.techniques,"techniques");
   listData(data.chakra_natures,"chakra_natures");
 
