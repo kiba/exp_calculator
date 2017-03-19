@@ -56,8 +56,8 @@ function calculateAttributePrice(attributes, bloodline)
 function calculateSkillPrice(data)
 {
   var cost = 0;
-  var skills = Object.create(data.skills);
-  var techniques = Object.create(data.techniques);
+  var skills = data.skills;
+  var techniques = data.techniques;
   var taijustu = skills["Taijustu"];
   var weapons = skills["Weapons"];
   var awareness = skills["Awareness"];
