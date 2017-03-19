@@ -30,7 +30,7 @@ function listSkills(data,name)
     var value = data[key];
     if (matching(key,exceptions) === true)
     {
-      console.log(key);
+      value = value + " <b class='marked'>Eff: " + (value + 3) + "</b>";
     }
     var dd = "<dd>" + value + "</dd>"
     $("#" + name).append("<dt>" + key + "</dt>");
