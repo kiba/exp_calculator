@@ -84,6 +84,12 @@ function calculateSkillPrice(data)
 }
 
 function receiveData(data) {
+
+  listData(data.attributes,"attributes");
+  listSkills(data.skills,"skills");
+  listData(data.techniques,"techniques");
+  listData(data.chakra_natures,"chakra_natures");
+
   var cost = 0;
   cost += calculateAttributePrice(data.attributes,data.bloodline);
   var skill_price = calculateSkillPrice(data);
@@ -100,10 +106,7 @@ function receiveData(data) {
   $("#misc").append("<dt>Unspent</dt>");
   $("#misc").append("<dd>" + unspent + "</dd>");
 
-  listData(data.attributes,"attributes");
-  listSkills(data.skills,"skills");
-  listData(data.techniques,"techniques");
-  listData(data.chakra_natures,"chakra_natures");
+
 
 }
 
